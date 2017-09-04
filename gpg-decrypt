@@ -17,12 +17,26 @@
 #
 #    --no-use-agent                Do not use a system agent such as Ubuntu's gnome-keyring process.
 #
-# Command: gpg-decrypt
-# Version: 2.1.0
-# Created: 2010-05-20
-# Updated: 2017-01-09
-# License: GPL
-# Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+#
+# ## Related
+#
+# These commands are related:
+#
+#   * `gpg-encrypt`: encrypt a file using our best settings.
+#  
+#   * `gpg-decrypt`: decrypt a file using our best settings.
+#
+#   * `gpg-decrypt-solo`: decrypt a file using our best settings, with no agent.
+#
+#
+# ## Tracking
+#
+#   * Command: gpg-decrypt
+#   * Version: 3.0.0
+#   * Created: 2010-05-20
+#   * Updated: 2017-09-03
+#   * License: GPL
+#   * Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
 ##
 set -euf
 umask_save=`umask`

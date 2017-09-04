@@ -12,4 +12,25 @@ Output is a new decrypted file:
 
     example.txt
 
-Also see our `gpg-encrypt` command to encrypt a file using our best settings.
+
+## Related
+
+These commands are related:
+
+  * `gpg-encrypt`: encrypt a file using our best settings.
+  
+  * `gpg-decrypt`: decrypt a file using our best settings.
+
+  * `gpg-decrypt-solo`: decrypt a file using our best settings, with no agent.
+
+
+## Tracking
+
+  * Command: gpg-decrypt
+  * Version: 3.0.0
+  * Created: 2010-05-20
+  * Updated: 2017-09-04
+  * License: GPL
+  * Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+  
+  
