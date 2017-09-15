@@ -1,5 +1,7 @@
 # gpg-decrypt:<br>decrypt a file using our best settings
 
+<img src="README.png" alt="GnuPG" width="356" height="120"/>
+
 Syntax:
 
     gpg-decrypt <file>
