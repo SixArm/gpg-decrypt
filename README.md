@@ -15,6 +15,89 @@ Output is a new decrypted file:
     example.txt
 
 
+## Settings
+
+To get our settings, we use these gpg options:
+
+  * `--quiet`: Try to be as quiet as possible.
+  * `--no-greeting`: Suppress the initial copyright message but do not enter batch mode.
+
+If you are on an older system, then you may want to add this:
+
+  * `--no-use-agent`: Do not use a system agent such as Ubuntu's gnome-keyring process.
+
+  * `--pinentry-mode=loopback`: Use the terminal for PIN encry.
+
+
+## More examples
+
+
+To decrypt a file:
+
+    $ gpg-decrypt foo.gpg
+
+To decrypt a file to a specific output file name:
+
+    $ gpg-decrypt foo.gpg --output goo
+
+To decrypt a directory:
+
+    $ gpg-dncrypt foo.tar.gpg | tar -x
+
+To decrypt a file then delete it:
+
+    $ gpg-decrypt foo.gpg && rm foo.gpg
+
+To decrypt a directory then delete it:
+
+    $ gpg-dncrypt foo.tar.gpg | tar -x && rm foo.tar.gpg
+
+
+## Advice
+
+We tend to use these naming conventions:
+
+  * GPG file name extension `.gpg`.
+  * tar file extension `.tar`.
+
+We tend to skip compression:
+
+  * We tend to use `gpg` without using compression.
+  * We tend to use `tar` without using compression.
+
+
+## Troubleshooting
+
+
+### TTY
+
+If you get error messages like this:
+
+    gpg: Inappropriate ioctl for device
+    gpg: problem with the agent: Inappropriate ioctl for device
+    gpg: error creating passphrase: Operation cancelled
+    gpg: symmetric encryption of `[stdin]' failed: Operation cancelled
+
+Then try this:
+
+    $ export GPG_TTY=$(tty)
+
+
+### Restart
+
+If you get error message like this:
+
+    gpg: WARNING: server 'gpg-agent' is older than us (2.2.6 < 2.2.7)
+    gpg: Note: Outdated servers may lack important security fixes.
+    gpg: Note: Use the command "gpgconf --kill all" to restart them.
+    gpg: signal Interrupt caught ... exiting
+
+Then try this:
+
+    $ gpgconf --kill all
+
+
+
 ## See also
  
 These commands are similar:
@@ -35,9 +118,9 @@ These commands are similar:
 ## Tracking
 
   * Command: gpg-decrypt
-  * Version: 3.0.0
+  * Version: 4.0.0
   * Created: 2010-05-20
-  * Updated: 2017-09-04
+  * Updated: 2018-11-01
   * License: GPL
   * Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
   
