@@ -118,10 +118,13 @@ These commands are similar:
 ## Tracking
 
   * Command: gpg-decrypt
+  * Website: https://sixarm.com/gpg-decrypt
+  * Cloning: https://github.com/sixarm/gpg-decrypt
   * Version: 4.0.0
   * Created: 2010-05-20
   * Updated: 2018-11-01
   * License: GPL
   * Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
-  
+  * Tracker: 15aff3e7c5a9635607f085773eee0238
+
   
