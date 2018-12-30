@@ -124,5 +124,10 @@
 set -euf
 umask_save=`umask`
 umask 0077
-gpg --decrypt --quiet --no-greeting --pinentry-mode=loopback "$@"
+gpg \
+    --decrypt \
+    --quiet \
+    --no-greeting \
+    --pinentry-mode=loopback \
+    "$@"
 umask "$umask_save"

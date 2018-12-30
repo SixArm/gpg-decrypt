@@ -66,6 +66,18 @@ We tend to skip compression:
   * We tend to use `tar` without using compression.
 
 
+## Command
+
+The command is:
+
+    gpg \
+    --decrypt \
+    --quiet \
+    --no-greeting \
+    --pinentry-mode=loopback \
+    "$@"
+
+
 ## Troubleshooting
 
 
